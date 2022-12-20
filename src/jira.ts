@@ -148,15 +148,12 @@ ${body}`;
   static getNoIdComment = (branch: string): string => {
     return `<p> A JIRA Issue ID is missing from your branch name! 🦄</p>
 <p>Your branch: ${branch}</p>
-<p>If this is your first time contributing to this repository - welcome!</p>
 <hr />
-<p>Please refer to <a href="https://github.com/btwrk/action-jira-linter">action-jira-linter</a> to get started.
 <p>Without the JIRA Issue ID in your branch name you would lose out on automatic updates to JIRA via SCM; some GitHub status checks might fail.</p>
 Valid sample branch names:
 
-  ‣ feature/shiny-new-feature--mojo-10'
-  ‣ 'chore/changelogUpdate_mojo-123'
-  ‣ 'bugfix/fix-some-strange-bug_GAL-2345'
+  ‣ 'DEV-1234-Added-Security-Checks-For-Endpoint'
+  ‣ 'DEV-1234'
 `;
   };
 
@@ -179,7 +176,7 @@ Valid sample branch names:
   static getInvalidIssueStatusComment = (issueStatus: string, allowedStatuses: string[]): string => {
     const allowedStatusesString = allowedStatuses.join(', ');
 
-    return `<p>:broken_heart: The detected issue is not in one of the allowed statuses :broken_heart: </p>
+    return `<p>The detected issue is not in one of the allowed statuses :broken_heart: </p>
       <table>
         <tr>
             <th>Detected Status</th>
