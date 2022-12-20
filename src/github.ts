@@ -98,7 +98,7 @@ export class GitHub {
     `;
     } else if (matchRange >= 0.2 && matchRange <= 0.4) {
       return `<p>
-      Let's make that PR title a 💯 shall we? 💪
+      Let's make that PR title a 💯 shall we?
       </p>
       <p>
       Your <em>PR title</em> and <em>story title</em> look <strong>slightly different</strong>. Just checking in to know if it was intentional!
@@ -118,9 +118,7 @@ export class GitHub {
       </p>
       `;
     }
-    return `<p>I'm a bot and I 👍 this PR title. 🤖</p>
-
-    <img src="https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif" width="400" />`;
+    return `<p>I'm a bot and I 👍 this PR title 🤖</p>`;
   };
 
   /**
@@ -197,7 +195,6 @@ export class GitHub {
     threshold: number
   ): string =>
     `<p>This PR is too huge for one to review :broken_heart: </p>
-    <img src="https://media.giphy.com/media/26tPskka6guetcHle/giphy.gif" width="400" />
     <table>
       <tr>
         <th>Additions</th>
