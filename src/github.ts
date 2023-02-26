@@ -118,7 +118,6 @@ export class GitHub {
       </p>
       `;
     }
-    return `<p>I'm a bot and I 👍 this PR title 🤖</p>`;
   };
 
   /**
