@@ -27,7 +27,7 @@ export class Jira {
   static getJIRAIssueKeys = (input: string): string[] => {
     const matches = this.reverseString(input).toUpperCase().match(JIRA_REGEX_MATCHER);
     if (matches?.length) {
-      return matches.map(this.reverseString);
+      return matches.map(this.reverseString).reverse();
     } else return [];
   };
 
